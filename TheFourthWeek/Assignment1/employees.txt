@@ -1,0 +1,26 @@
+1.创建表
+create table employees(
+emp_no int not null,
+birth_date char(10)  null,
+first_name char(10) not null,
+last_name char(10) not null,
+gender char(1) not null,
+hire_date char(10) not null,
+primary key(emp_no)
+)ENGINE=MyISAM;
+2.插入数据
+insert 
+into employees 
+values
+(10001,'1953-09-02','Georgi','Facello','M','1986-06-26'),
+(10002,'1964-06-02','Bezalel','Simmel','F','1985-11-21'),
+(10003,'1959-12-03','Parto','Bamford','M','1986-08-28'),
+(10004,'1954-05-01','Christian','Koblick','M','1986-12-01');
+3.查询
+select *
+from employees 
+where hire_date =
+(
+select max(hire_date)
+from employees e 
+);

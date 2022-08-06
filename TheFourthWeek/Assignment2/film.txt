@@ -1,0 +1,6 @@
+select f.film_id ,f.title 
+from film f 
+where f.film_id  not in
+(select film.film_id 
+from film inner join film_category fc
+on film.film_id =fc.film_id) ; 

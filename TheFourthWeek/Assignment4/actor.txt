@@ -1,0 +1,3 @@
+alter table actor 
+add unique index uniq_idx_firstname(first_name),
+add index idx_lastname(last_name);

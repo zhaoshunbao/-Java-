@@ -1,0 +1,22 @@
+1.创建表
+create table passing_number
+(
+id int not null,
+number int not null,
+t_rank int not null,
+primary key(id)
+);
+2.插入数据
+insert 
+into passing_number 
+values
+(1,4,1),
+(2,3,2),
+(3,3,2),
+(4,2,3),
+(5,5,3),
+(6,4,4);
+3.查询
+select id,number
+from passing_number
+order by number desc,id;
